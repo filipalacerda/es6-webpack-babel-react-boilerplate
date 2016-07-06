@@ -5,17 +5,16 @@ module.exports =  {
   entry: [
     'webpack/hot/only-dev-server',
     'babel-polyfill',
-    './index.js'
+    './src/index.js'
   ],
   output: {
-    path: '../dist/',
+    path: './dist/',
     publicPath: '/',
     filename: 'bundle.js'
   },
   module: {
     loaders: [
       {test: /\.js$/,  exclude: /node_modules/, loaders: ['react-hot', 'babel']},
-      {test: /\.json$/, loader: 'json'},
       {test: /\.s?css$/,loader: 'style!css!sass'}
     ]
   },
